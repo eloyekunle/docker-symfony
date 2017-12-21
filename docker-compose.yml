@@ -27,7 +27,7 @@ services:
         volumes:
             - ./logs/nginx/:/var/log/nginx
     elk:
-        build: 'git@github.com:playmice/docker-elk.git'
+        build: 'https://github.com:playmice/docker-elk.git'
         ports:
             - 81:80
         volumes:
