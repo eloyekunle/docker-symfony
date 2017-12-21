@@ -27,7 +27,7 @@ services:
         volumes:
             - ./logs/nginx/:/var/log/nginx
     elk:
-        image: willdurand/elk
+        image: willdurand/elk:kibana-5.x
         ports:
             - 81:80
         volumes:
