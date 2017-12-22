@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
     db:
@@ -36,3 +36,15 @@ services:
         volumes_from:
             - php
             - nginx
+    environment:
+        VIRTUAL_HOST: your-website.tld
+        LETSENCRYPT_HOST: your-website.tld
+        LETSENCRYPT_EMAIL: your-email@domain.tld
+    expose:
+        - "80"
+        - "443"
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
