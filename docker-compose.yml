@@ -26,6 +26,8 @@ services:
 #            - php
         volumes:
             - ./logs/nginx/:/var/log/nginx
+            - ${SYMFONY_APP_PATH}:/var/www/symfony
+            - ./logs/symfony:/var/www/symfony/var/log
         environment:
             VIRTUAL_HOST: docker1.elijahoyekunle.com
             LETSENCRYPT_HOST: docker1.elijahoyekunle.com
@@ -40,6 +42,9 @@ services:
         volumes:
             - ./elk/logstash:/etc/logstash/conf.d
             - ./elk/logstash/patterns:/opt/logstash/patterns
+            - ${SYMFONY_APP_PATH}:/var/www/symfony
+            - ./logs/symfony:/var/www/symfony/var/log
+            - ./logs/nginx/:/var/log/nginx
 #        volumes_from:
 #            - php
 #            - nginx
