@@ -27,9 +27,9 @@ services:
         volumes:
             - ./logs/nginx/:/var/log/nginx
         environment:
-            VIRTUAL_HOST: your-website.tld
-            LETSENCRYPT_HOST: your-website.tld
-            LETSENCRYPT_EMAIL: your-email@domain.tld
+            VIRTUAL_HOST: docker1.elijahoyekunle.com
+            LETSENCRYPT_HOST: docker1.elijahoyekunle.com
+            LETSENCRYPT_EMAIL: eloyekunle@gmail.com
         expose:
             - "80"
             - "443"
