@@ -20,8 +20,8 @@ services:
             - ./logs/symfony:/var/www/symfony/var/log
     nginx:
         build: nginx
-        ports:
-            - 80:80
+#        ports:
+#            - 80:80
         volumes_from:
             - php
         volumes:
