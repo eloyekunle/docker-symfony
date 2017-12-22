@@ -22,8 +22,6 @@ services:
         build: nginx
 #        ports:
 #            - 80:80
-        volumes_from:
-            - php
         volumes:
             - ./logs/nginx/:/var/log/nginx
         environment:
